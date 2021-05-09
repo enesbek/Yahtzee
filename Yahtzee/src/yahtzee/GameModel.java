@@ -14,7 +14,7 @@ public class GameModel {
     public static final int BONUS = 35;
     public static final int NUM_UPPER_SCORE_CATS = 6;
     public static final int NUM_LOWER_SCORE_CATS = 7;
-    public static final int MAX_NUM_TURNS = NUM_UPPER_SCORE_CATS + NUM_LOWER_SCORE_CATS;
+    public static final int MAX_NUM_TURNS = NUM_UPPER_SCORE_CATS + NUM_LOWER_SCORE_CATS + 1;
     
     private int sumUpperScore;
     private int sumLowerScore;
@@ -230,6 +230,10 @@ public class GameModel {
     }
     
     public void resetTurn(){
-        currentTurnNum = 1;
+        setCurrentTurnNum(1);
+    }
+
+    public void setCurrentTurnNum(int currentTurnNum) {
+        this.currentTurnNum = currentTurnNum;
     }
 }
